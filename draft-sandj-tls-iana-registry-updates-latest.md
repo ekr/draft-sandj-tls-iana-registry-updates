@@ -30,7 +30,7 @@ normative:
   RFC3749:
   RFC5077:
   RFC4680:
-  RFC5226:
+  RFC8126:
   RFC5246:
   RFC5705:
   RFC5878:
@@ -65,7 +65,7 @@ In this document, we use the term "(D)TLS" to refer to registries that apply to 
 
 - Add "TLS" to registries' names for consistency with other TLS-related registries.
 
-- Change the IANA registry policy {{RFC5226}} for the TLS ExtensionType Values, TLS Cipher Suite, and TLS ClientCertificateType Identifiers registries.  These more relaxes rules are more condusive to TBD.
+- Change the IANA registry policy {{RFC8126}} for the TLS ExtensionType Values, TLS Cipher Suite, and TLS ClientCertificateType Identifiers registries.  These more relaxes rules are more condusive to TBD.
 
 - Add the designated expert intructions as a note to the TLS ExtensionType Values, TLS Cipher Suite, and TLS ClientCertificateType Identifiers registries to inform IANA-registry-focused, non-RFC-reading what's expected from the registry.
 
@@ -98,10 +98,10 @@ IANA is also to add a reference to this document for the registry whose names ha
 
 NOTE: Henceforth in this document the registries will be referred to using the "TLS" prefix.
 
-Aligning with RFC 5226
+Aligning with RFC 8126
 ======================
 
-Many of the TLS-related IANA registries were defined prior to {{RFC5226}} where "IETF Consensus" was used instead of the RFC5226-defined "IETF Review".  To align with the new terminology, IANA is to update to use "IETF Review" in place of "IETF Consensus" in the following registries:
+Many of the TLS-related IANA registries were defined prior to {{RFC8126}} where "IETF Consensus" was used instead of the RFC8126-defined "IETF Review".  To align with the new terminology, IANA is to update to use "IETF Review" in place of "IETF Consensus" in the following registries:
 
 - TLS Authorization Data Formats
 - TLS Supplemental Data Formats (SupplementalDataType)
@@ -115,13 +115,14 @@ IANA is to update the TLS ExtensionType Values registry as follows:
 
 - Change the registry policy to:
 
-    Values with the first byte in the range 0-254 (decimal) are assigned via Specification Required {{RFC5226}}.  Values with the first byte 255 (decimal) are reserved for Private Use {{RFC5226}}.
+    Values with the first byte in the range 0-254 (decimal) are assigned via Expert Review {{RFC8126}}.  Values with the first byte 255 (decimal) are reserved for Private Use {{RFC8126}}.
 
 - Update the "References" to also refer to this document.
 
 - Add the following note:
 
-    Note: Experts are to verify that there is in fact a publicly available standard.
+    The designated expert {{RFC8126}} only ensures that the specification is publically available. An Internet-Draft conforms to this requirement.
+
 
 TLS Cipher Suite Registry
 =========================
@@ -130,7 +131,7 @@ IANA is to update the TLS Cipher Suite registry as follows:
 
 - Change the registry policy to:
 
-    Values with the first byte in the range 0-254 (decimal) are assigned via Specification Required {{RFC5226}}.  Values with the first byte 255 (decimal) are reserved for Private Use {{RFC2434}}.
+    Values with the first byte in the range 0-254 (decimal) are assigned via Expert Review {{RFC8126}}.  Values with the first byte 255 (decimal) are reserved for Private Use {{RFC2434}}.
 
 - Add a "Recommended" column to the cipher suite registry.  The cipher suites that follow in the two tables are marked as "Yes". All other cipher suites are marked as "No".
 
@@ -182,7 +183,7 @@ TLS_DHE_PSK_WITH_CHACHA20_POLY1305_SHA256     | {0xCC,0xAD}
 
     Cipher suites marked as "Yes" are those allocated via Standards Track RFCs.  Cipher suites marked as "No" are not; cipher suites marked "No" range from "good" to "bad" from a cryptographic standpoint.
 
-    The designated expert {{RFC5226}} only ensures that the specification is publically available.
+    The designated expert {{RFC8126}} only ensures that the specification is publically available. An Internet-Draft conforms to this requirement.
 
 TLS ClientCertificateType Identifiers
 =====================================
@@ -191,14 +192,14 @@ IANA is to update the TLS ClientCertificateType Identifiers registry as follows:
 
 - Change the registry policy to:
 
-    Values in the range 0-223 are assigned via Specification Required {{RFC5226}}.  Values 224-255 are are reserved for Private Use.
+    Values in the range 0-223 are assigned via Expert Review {{RFC8126}}.  Values 224-255 are are reserved for Private Use.
 
 - Add the following:
 
     Note:
 
-    The designated expert {{RFC5226}} only ensures that the specification is publically available.
-
+    The designated expert {{RFC8126}} only ensures that the specification is publically available. An Internet-Draft conforms to this requirement.
+    
 New Session Ticket TLS Handshake Message Type
 =============================================
 
